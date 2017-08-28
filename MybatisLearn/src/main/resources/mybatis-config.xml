@@ -17,4 +17,39 @@
 	<mappers>
 		<mapper resource="mapper/UserInfo.xml"/>
 	</mappers>
+	
+	<settings>
+		<!-- 是否开启缓存，默认true -->
+		<setting name="cacheEnabled" value="true"/>
+		<!-- 是否开启延迟加载，默认false -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<!-- 方法调用是否加载对象的所有属性，默认false -->
+		<setting name="aggressiveLazyLoading" value="false"/>
+		<!-- 是否允许单一查询返回多结果集，默认true -->
+		<setting name="multipleResultSetsEnabled" value="true"/>
+		<!-- 使用列标签代替列名，默认为true -->
+		<setting name="useColumnLabel" value="true"/>
+		<!-- 是否允许JDBC自动生成主键，默认为false -->
+		<setting name="useGeneratedKeys" value="false"/>
+		<!-- 如何自动映射列到字段和属性上，可选NONE－取消自动映射、PARTIAL－只自动映射没有嵌套结果集的结果集、FULL－自动映射任何复杂的结果集(无论是否嵌套)，默认为PARTIAL -->
+		<setting name="autoMappingBehavior" value="PARTIAL"/>
+		<!-- 指定发现自动映射目标未知列的行为，可选NONE－不做反应、WARNING－输出警告日志，FAILING－映射失败，抛出SqlSessionException，默认为NONE -->
+		<setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+		<!-- 默认的执行器， -->
+		<setting name="defaultExecutorType" value="SIMPLE"/>
+		<!--  -->
+		<setting name="defaultStatementTimeout" value="25"/>
+		<!--  -->
+		<setting name="defaultFetchSize" value="100"/>
+		<!--  -->
+		<setting name="safeRowBoundsEnabled" value="false"/>
+		<!--  -->
+		<setting name="mapUnderscoreToCamelCase" value="false"/>
+		<!--  -->
+		<setting name="localCacheScope" value="SESSION"/>
+		<!--  -->
+		<setting name="jdbcTypeForNull" value="OTHER"/>
+		<!--  -->
+		<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+	</settings>
 </configuration>
