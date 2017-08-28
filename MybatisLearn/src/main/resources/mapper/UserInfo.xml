@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatislearn.mapper">
+	<resultMap type="com.sschen.mybatis.model.UserInfo" id="UserInfo">
+		<id column="ID" jdbcType="VARCHAR" property="id"/>
+		<result column="Name" jdbcType="VARCHAR" property="name"/>
+		<result column="Email" jdbcType="VARCHAR" property="email"/>
+		<result column="Telephone" jdbcType="VARCHAR" property="telephone"/>
+		<result column="Mobile" jdbcType="VARCHAR" property="mobile"/>
+	</resultMap>
+  <sql id="Base_Column_List">
+    ID,`Name`,Email,Telephone,Mobile
+  </sql>
+  
+  <!-- login -->
+  <select id="getUserInfo" resultMap="UserInfo" >
+  	SELECT 
+    <include refid="Base_Column_List" />
+    from userinfo
+  </select> 
+</mapper>
